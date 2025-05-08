@@ -82,3 +82,7 @@ func (t *Token) Invalidate() {
 func (t *Token) Key() string {
 	return t.token
 }
+
+func (t *Token) String() string {
+	return t.token
+}
