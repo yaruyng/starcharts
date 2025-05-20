@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strarcharts/config"
 	"strarcharts/internal/cache"
-	"strarcharts/roundrobin"
+	"strarcharts/internal/roundrobin"
 )
 
 var ErrRateLimit = errors.New("rate limited, please try again later")
