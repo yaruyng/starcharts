@@ -66,7 +66,7 @@ func extractSvgChartParams(r *http.Request) (*params, error) {
 	}, nil
 }
 
-func writeSvgHeader(w http.ResponseWriter) {
+func writeSvgHeaders(w http.ResponseWriter) {
 	header := w.Header()
 	header.Add("content-type", "image/svg+xml;charset=utf-8")
 	header.Add("cache-control", "public, max-age=86400")
