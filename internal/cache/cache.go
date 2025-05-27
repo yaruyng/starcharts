@@ -44,13 +44,14 @@ type Redis struct {
 }
 
 func New(redis *redis.Client) *Redis {
-	codec := &rediscache.Codec{Redis: redis,
+	//rediscache.Codec is used for encoding and decoding Redis cached data
+	codec := &rediscache.Codec{Redis: redis, //redis client instance
 		Marshal: func(v interface{}) ([]byte, error) {
-			return msgpack.Marshal(v)
+			return msgpack.Marshal(v) //serialization function
 		},
 		Unmarshal: func(b []byte, v interface{}) error {
 			return msgpack.Unmarshal(b, v)
-		},
+		}, //deserialization function
 	}
 	return &Redis{
 		redis: redis,

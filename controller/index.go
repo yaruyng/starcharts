@@ -18,7 +18,7 @@ func Index(filesystem fs.FS, version string) http.Handler {
 	})
 }
 
-func HandleFrom() http.HandlerFunc {
+func HandleForm() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		repo := strings.TrimPrefix(r.FormValue("repository"), "https://github.com/")
 		http.Redirect(w, r, repo, http.StatusSeeOther)

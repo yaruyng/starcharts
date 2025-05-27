@@ -3,6 +3,7 @@ module strarcharts
 go 1.24.1
 
 require (
+	github.com/apex/httplog v1.0.0
 	github.com/apex/log v1.9.0
 	github.com/caarlos0/env/v6 v6.10.1
 	github.com/caarlos0/httperr v1.4.0
@@ -12,6 +13,7 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/prometheus/client_golang v1.22.0
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
+	golang.org/x/image v0.27.0
 	golang.org/x/sync v0.7.0
 )
 
@@ -24,7 +26,6 @@ require (
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
-	golang.org/x/image v0.27.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect

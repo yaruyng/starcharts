@@ -15,6 +15,8 @@ type Config struct {
 }
 
 // Get the current Config.
+// cfg is the name of the return value
+// Inside the function body, the cfg variable has already been automatically declared and initialized
 func Get() (cfg Config) {
 	if err := env.Parse(&cfg); err != nil {
 		log.WithError(err).Fatal("failed to load config")
